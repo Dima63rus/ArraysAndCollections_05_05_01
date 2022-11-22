@@ -1,13 +1,17 @@
 public class Main {
     public static void main(String[] args) {
 /*
-1. РЎРѕР·РґР°Р№С‚Рµ РјР°СЃСЃРёРІ РёР· РјРЅРµРјРѕРЅРёС‡РµСЃРєРѕР№ С„СЂР°Р·С‹: РљР°Р¶РґС‹Р№ РѕС…РѕС‚РЅРёРє Р¶РµР»Р°РµС‚ Р·РЅР°С‚СЊ, РіРґРµ СЃРёРґРёС‚ С„Р°Р·Р°РЅ.
-2. РќР°РїРёС€РёС‚Рµ РєРѕРґ, РєРѕС‚РѕСЂС‹Р№ РјРµРЅСЏРµС‚ РїРѕСЂСЏРґРѕРє СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ СЌР»РµРјРµРЅС‚РѕРІ РІРЅСѓС‚СЂРё РјР°СЃСЃРёРІР° РЅР° РѕР±СЂР°С‚РЅС‹Р№.
+1. Создайте массив из мнемонической фразы: Каждый охотник желает знать, где сидит фазан.
+2. Напишите код, который меняет порядок расположения элементов внутри массива на обратный.
 */
-        String lvText = "РљР°Р¶РґС‹Р№ РѕС…РѕС‚РЅРёРє Р¶РµР»Р°РµС‚ Р·РЅР°С‚СЊ, РіРґРµ СЃРёРґРёС‚ С„Р°Р·Р°РЅ";
-        String[] ltText = lvText.split(",^?\\s+");
-        for (int i = 0; i < ltText.length; i++) {
-            System.out.println(ltText[i]);
+        String lvStartText = "Каждый охотник желает знать, где сидит фазан";
+        String[] ltStartText = lvStartText.split("\\s+");
+
+        StringBuilder lvEndText = new StringBuilder();
+        for (int i = ltStartText.length - 1; i >= 0; i--) {
+            lvEndText.append(ltStartText[i]);
+            lvEndText.append(" ");
         }
+        System.out.println(lvEndText);
     }
 }
